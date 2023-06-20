@@ -54,12 +54,16 @@ function createMarkUp(array) {
   return array.map(({ url, breeds }) => {
     const { name, description, temperament } = breeds[0];
     return `
-    <img src="${url}" alt="${name}" width = "400">
+    <img class="cat-img" src="${url}" alt="${name}" width = "300">
+    <div class="cat-descr"
       <h2>${name}</h2>
-      <p>Description: ${description}</p>
-      <p>Temperament: ${temperament}</p>
+      <p><span class="bold">Description:</span> ${description}</p>
+      <p><span class="bold">Temperament:</span> ${temperament}</p>
+    </div>
     `;
   })
 };
+
+
 
 
