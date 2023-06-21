@@ -30,7 +30,7 @@ fetchBreeds().then((results) => {
 function createMarkUpSelect(arr) {
   return arr.map(el => {
     return `<option value = "${el.id}">${el.name}</option>`;
-  });
+  }).join();
 };
 
 refs.select.addEventListener('change', handlerSelect);
