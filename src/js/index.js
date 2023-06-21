@@ -18,6 +18,9 @@ fetchBreeds().then((results) => {
   refs.loader.hidden = true;
   refs.select.removeAttribute('hidden');
   refs.select.insertAdjacentHTML('beforeend', createMarkUpSelect(results))
+  new SlimSelect({
+    select: '.breed-select',
+  });
 }).catch(error => {
   refs.select.setAttribute('hidden', '');
   refs.error.hidden = false;
